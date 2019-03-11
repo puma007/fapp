@@ -14,7 +14,7 @@ from urllib import parse
 IMAGE_FOLDER  = 'static/upload/'
 #生成无重复随机数
 gen_rnd_filename = lambda :"%s%s" %(datetime.datetime.now().strftime('%Y%m%d%H%M%S'), str(random.randrange(1000, 10000)))
-#文件名合法性验证
+#文pip freeze > requirements.txt件名合法性验证
 allowed_file = lambda filename: '.' in filename and filename.rsplit('.', 1)[1] in set(['xls', 'xlsx'])
 
 app = Flask(__name__)

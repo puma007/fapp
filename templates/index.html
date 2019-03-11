@@ -125,7 +125,7 @@
                 if(res.code == 0){ //上传成功
                     var tr = demoListView.find('tr#upload-'+ index),tds = tr.children();
                     tds.eq(2).html('<span style="color: #5FB878;">分析成功</span>');
-                    tds.eq(3).html('<a href="'+res.data.src+'" target="_blank"><button class="layui-btn layui-btn-mini layui-btn-normal">查看</button></a><a href="http://view.officeapps.live.com/op/view.aspx?'+res.data.docsrc+'" target="_blank"><button class="layui-btn layui-btn-mini layui-btn-normal">预览</button></a>'); //清空操作
+                    tds.eq(3).html('<a href="'+res.data.src+'" target="_blank"><button class="layui-btn layui-btn-mini layui-btn-normal">下载</button></a><a href="http://view.officeapps.live.com/op/view.aspx?'+res.data.docsrc+'" target="_blank"><button class="layui-btn layui-btn-mini layui-btn-normal">预览</button></a>'); //清空操作
                     delete this.files[index]; //删除文件队列已经上传成功的文件
                     layer.closeAll('loading');
                     return;
